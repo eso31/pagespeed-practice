@@ -7,6 +7,15 @@
     menuLink.onclick = function (e) {
         toggleAll(e);
     };
+    
+    function toggleAll(e) {
+        var active = 'active';
+
+        e.preventDefault();
+        toggleClass(layout, active);
+        toggleClass(menu, active);
+        toggleClass(menuLink, active);
+    }
 
     function toggleClass(element, className) {
         var classes = element.className.split(/\s+/),
@@ -26,15 +35,5 @@
 
         element.className = classes.join(' ');
     }
-
-    function toggleAll(e) {
-        var active = 'active';
-
-        e.preventDefault();
-        toggleClass(layout, active);
-        toggleClass(menu, active);
-        toggleClass(menuLink, active);
-    }
-
 
 }(this, this.document));
