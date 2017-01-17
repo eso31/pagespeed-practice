@@ -3,6 +3,10 @@
     var layout   = document.getElementById('layout'),
         menu     = document.getElementById('menu'),
         menuLink = document.getElementById('menuLink');
+    
+    menuLink.onclick = function (e) {
+        toggleAll(e);
+    };
 
     function toggleClass(element, className) {
         var classes = element.className.split(/\s+/),
@@ -31,10 +35,6 @@
         toggleClass(menu, active);
         toggleClass(menuLink, active);
     }
-
-    menuLink.onclick = function (e) {
-        toggleAll(e);
-    };
 
 
 }(this, this.document));
